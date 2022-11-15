@@ -36,7 +36,7 @@ export async function pushNotification(title: string, description: string) {
     if (!!sctKey) {
         const serverChanTurbo = new ServerChanTurbo(sctKey);
         promises.push(serverChanTurbo.send(title, description));
-        console.log("已发送server酱信息");
+        console.log(`已发送server酱信息: ${sctKey}`);
     }else{
          throw new Error("未向server酱发送信息");
     }
